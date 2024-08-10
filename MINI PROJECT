@@ -1,0 +1,125 @@
+//HOSTLE MANAGMENT 
+
+package miniProject;
+import java.util.Scanner;
+
+public class Hostle {
+    static int advFee = 2000;
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("---------------> WELCOME TO SVS BOYS HOSTLE   <--------------");
+        System.out.println("=================    LOCATION: SR Nagar Hyd      ===============");
+
+        while (true) {
+            System.out.println("Enter a number to choose an option:");
+            System.out.println("1. For hostel details");
+            System.out.println("2. Exit");
+            System.out.println("3. To know the rooms details");
+
+            int num = sc.nextInt();
+
+            if (num == 1) {
+                System.out.println("--------To join in this hostel there are some rules and regulations------");
+                System.out.println("     @@@@@@@     ");
+                System.out.println("     @@@@@@@     ");
+                System.out.println("NO SMOKING AND NO DRINKING");
+                System.out.println("NO BIRTHDAY PARTIES INSIDE THE HOSTEL ROOM");
+                System.out.println("DON'T TAKE FOOD TO UPSTAIRS");
+                System.out.println("ADVANCE FEE 2000 AND 1000 IS REPAYABLE AND 1000 FOR MAINTENANCE");
+                System.out.println("IF YOU WANT TO GET YOUR 1000 BACK YOU NEED TO INFORM THE HOSTEL MANAGEMENT BEFORE 10 DAYS LEAVING THE HOSTEL");
+                System.out.println("-----------------------");
+                System.out.println("-----------------------");
+                System.out.println("Facilities providing by hostle managment ");
+                System.out.println("WASHING MACHINE \n24/7 WATER FACILITY \nHOT WATER \nPARKING FOR BIKES");
+                System.out.println("If you are not obey with above rules, press 2 to exit.");
+            } else if (num == 2) {
+                System.out.println("THANKS FOR VISITING. PLEASE LEAVE THE HOSTEL.");
+                break;
+            } else if (num == 3) {
+                System.out.println("There is availability of 2, 3, 4, 5 sharing rooms, all are non-AC.");
+                System.out.println("The cost of the rooms depends on the sharing of the room.");
+                System.out.println("Please enter 'two', 'three', 'four', or 'five' to know the cost of specific sharing rooms:");
+                
+               sc.nextLine(); // Clear the buffer
+                String sharingType = sc.nextLine();
+
+                switch (sharingType) {
+                    case "two":
+                        int costTwo = 10000;
+                        System.out.println("The cost of 2 sharing is " + costTwo + " + " + advFee + " advance fee");
+                        System.out.println("TOTAL COST = " + (costTwo + advFee));
+                        System.out.print("Are processed for payment?(yes/no)");
+                        String val=sc.next();
+                        if(val.equalsIgnoreCase("yes")) {
+                        	System.out.println("payment succesful");
+                        	System.out.println("=====THANKS FOR JOINING====");
+                        	
+                        }else {
+                        	System.out.println("Payment Cancelled.    THANKS FOR VISITING");
+                        }
+                        break;
+
+                    case "three":
+                        int costThree = 8500;
+                        System.out.println("The cost of 3 sharing is " + costThree + " + " + advFee + " advance fee");
+                        System.out.println("TOTAL COST = " + (costThree + advFee));
+                        System.out.print("Are processed for payment?(yes/no)");
+                         val=sc.next();
+                        if(val.equalsIgnoreCase("yes")) {
+                        	System.out.println("payment succesful");
+                        	System.out.println("=====THANKS FOR JOINING====");
+                        	
+                        }else {
+                        	System.out.println("Payment Cancelled.    THANKS FOR VISITING");
+                        }
+                        break;
+
+                    case "four":
+                        int costFour = 8000;
+                        System.out.println("The cost of 4 sharing is " + costFour + " + " + advFee + " advance fee");
+                        System.out.println("TOTAL COST = " + (costFour + advFee));
+                        System.out.print("Are processed for payment?(yes/no)");
+                       
+                        val=sc.next();
+                        if(val.equalsIgnoreCase("yes")) {
+                        	System.out.println("payment succesful");
+                        	System.out.println("=====THANKS FOR JOINING====");
+                        	
+                        }else {
+                        	System.out.println("Payment Cancelled.    THANKS FOR VISITING");
+                        }
+                        break;
+
+                    case "five":
+                        int costFive = 7000;
+                        System.out.println("The cost of 5 sharing is " + costFive + " + " + advFee + " advance fee");
+                        System.out.println("TOTAL COST = " + (costFive + advFee));
+                        System.out.print("Are processed for payment?(yes/no)");
+                         val=sc.next();
+                        if(val.equalsIgnoreCase("yes")) {
+                        	System.out.println("payment succesful");
+                        	System.out.println("=====THANKS FOR JOINING====");
+                        	
+                        }else {
+                        	System.out.println("Payment Cancelled.    THANKS FOR VISITING");
+                        }
+                        break;
+
+                    default:
+                        System.out.println("Invalid sharing type. Please enter a valid option.");
+                        break;
+                }
+            } else {
+                System.out.println("Invalid option. Please try again.");
+            }
+        }
+        sc.close();
+    }
+}
+
+   
+        
+    
+
